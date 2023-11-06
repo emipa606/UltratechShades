@@ -35,6 +35,7 @@ These glasses also have a lesser plate-class shield generator built in that full
       <GeneralLaborSpeed>0.25</GeneralLaborSpeed>
       <SmoothingSpeed>0.5</SmoothingSpeed>
       <SocialImpact>0.2</SocialImpact>
+      <MechBandwidth MayRequire="Ludeon.Rimworld.Biotech">3</MechBandwidth>
     </equippedStatOffsets>
     <thingCategories Inherit="False">
       <li>Headgear</li>

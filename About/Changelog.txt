@@ -1,4 +1,7 @@
 # Changelog for UltratechShades
 
+1.4.1 - Added some bandwidth for mechanators for some of the shades based on their descriptions
+
+
 1.4.0 - First publish
 

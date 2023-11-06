@@ -38,6 +38,7 @@ These glasses also have a lesser PLATE class shield generator built in that full
       <MedicalTendQuality>0.3</MedicalTendQuality>
       <MedicalSurgerySuccessChance>0.15</MedicalSurgerySuccessChance>
       <SocialImpact>0.2</SocialImpact>
+      <MechBandwidth MayRequire="Ludeon.Rimworld.Biotech">9</MechBandwidth>
     </equippedStatOffsets>
     <thingCategories Inherit="False">
       <li>Headgear</li>

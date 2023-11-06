@@ -33,6 +33,7 @@ These glasses also have a PLATE class shield generator built in that fully envel
       <MeleeDodgeChance>0.5</MeleeDodgeChance>
       <ShootingAccuracyPawn>3.0</ShootingAccuracyPawn>
       <SocialImpact>0.2</SocialImpact>
+      <MechBandwidth MayRequire="Ludeon.Rimworld.Biotech">6</MechBandwidth>
     </equippedStatOffsets>
     <thingCategories Inherit="False">
       <li>Headgear</li>

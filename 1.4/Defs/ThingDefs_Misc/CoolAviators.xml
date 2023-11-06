@@ -34,6 +34,7 @@ These glasses also have a PLATE class shield generator built in that fully envel
       <ShootingAccuracyPawn>5.0</ShootingAccuracyPawn>
       <AimingDelayFactor>0.1</AimingDelayFactor>
       <SocialImpact>0.2</SocialImpact>
+      <MechBandwidth MayRequire="Ludeon.Rimworld.Biotech">3</MechBandwidth>
     </equippedStatOffsets>
     <thingCategories Inherit="False">
       <li>Headgear</li>
