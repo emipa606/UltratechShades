@@ -5,6 +5,8 @@
 Update of Catlover366, Elseud, Renn, flangopink, Sovereigns mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2860067288
 
+- Added some bandwidth for some of the glasses based on their description
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
 	

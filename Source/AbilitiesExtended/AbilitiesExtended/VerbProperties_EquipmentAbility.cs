@@ -6,6 +6,7 @@ namespace AbilitiesExtended;
 
 public class VerbProperties_EquipmentAbility : VerbProperties
 {
+    public readonly int ScattershotCount = 0;
     public bool EffectsUser = false;
 
     public float EffectsUserChance = 0f;
@@ -43,15 +44,13 @@ public class VerbProperties_EquipmentAbility : VerbProperties
 
     public StatDef ResistEffectStat = null;
 
-    public int ScattershotCount = 0;
-
     public bool TwinLinked = false;
 
     public bool TyranidBurstBodySize = false;
 
     public HediffDef UserEffect = null;
 
-    public List<string> UserEffectImmuneList = new List<string>();
+    public List<string> UserEffectImmuneList = [];
 
     public VerbProperties VerbProps;
 }

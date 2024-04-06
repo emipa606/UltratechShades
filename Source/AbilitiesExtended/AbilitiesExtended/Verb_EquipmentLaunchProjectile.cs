@@ -37,13 +37,13 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
         if (EquipmentSource != null)
         {
             EquipmentSource.TryGetCompFast<CompChangeableProjectile>()?.Notify_ProjectileLaunched();
-            EquipmentSource.TryGetCompFast<CompReloadable>()?.UsedOnce();
+            EquipmentSource.TryGetCompFast<CompApparelReloadable>()?.UsedOnce();
         }
 
         var manningPawn = caster;
         Thing equipmentSource = EquipmentSource;
         var compMannable = caster.TryGetCompFast<CompMannable>();
-        if (compMannable is { ManningPawn: { } })
+        if (compMannable is { ManningPawn: not null })
         {
             manningPawn = compMannable.ManningPawn;
             equipmentSource = caster;
@@ -91,7 +91,7 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
         var targetCoverDef = randomCoverToMissInto?.def;
         if (!Rand.Chance(shotReport.AimOnTargetChance_IgnoringPosture))
         {
-            resultingLine.ChangeDestToMissWild(shotReport.AimOnTargetChance_StandardTarget);
+            resultingLine.ChangeDestToMissWild_NewTemp(shotReport.AimOnTargetChance_StandardTarget, false, caster.Map);
             ThrowDebugText($"ToWild{(canHitNonTargetPawnsNow ? "\nchntp" : "")}");
             ThrowDebugText("Wild\nDest", resultingLine.Dest);
             var projectileHitFlags2 = ProjectileHitFlags.NonTargetWorld;
@@ -179,7 +179,7 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
     public override void DrawHighlight(LocalTargetInfo target)
     {
         var def = ability.def;
-        DrawRadius();
+        DrawHighlightFieldRadiusAroundTarget(target);
         if (CanHitTarget(target) && IsApplicableTo(target))
         {
             if (def.HasAreaOfEffect)
@@ -216,7 +216,7 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
 
         if (needLOSToCenter)
         {
-            GenExplosion.RenderPredictedAreaOfEffect(resultingLine.Dest, num);
+            GenExplosion.RenderPredictedAreaOfEffect(resultingLine.Dest, num, verbProps.explosionRadiusRingColor);
             return;
         }
 

@@ -7,12 +7,12 @@ namespace AbilitiesExtended;
 
 public class EquipmentAbilityDef : AbilityDef
 {
-    public float cooldown = 0f;
-    public bool hasCooldown = true;
+    public readonly float cooldown = 0f;
+    public readonly bool hasCooldown = true;
+
+    public readonly bool requirePsycast = false;
 
     public int requiredPsycastLevel = 0;
-
-    public bool requirePsycast = false;
 
     public virtual string GetDescription()
     {
@@ -40,9 +40,8 @@ public class EquipmentAbilityDef : AbilityDef
         stringBuilder.AppendLine($"{StringsToTranslate.AU_Cooldown}{cooldown:N0} " + "SecondsLower".Translate());
         if (comps.Any(x => x.GetType() == typeof(CompProperties_EffectWithDest)))
         {
-            var unused =
-                (CompProperties_EffectWithDest)comps.Find(x =>
-                    x.compClass == typeof(CompProperties_EffectWithDest));
+            _ = (CompProperties_EffectWithDest)comps.Find(x =>
+                x.compClass == typeof(CompProperties_EffectWithDest));
             if (verbProperties.defaultProjectile != null)
             {
                 if (verbProperties.defaultProjectile.projectile.explosionRadius > 0f)
@@ -64,7 +63,7 @@ public class EquipmentAbilityDef : AbilityDef
             stringBuilder.AppendLine(StringsToTranslate.AU_Type + StringsToTranslate.AU_TargetSelf);
         }
 
-        if (properties.defaultProjectile is { projectile: { } } &&
+        if (properties.defaultProjectile is { projectile: not null } &&
             properties.defaultProjectile.projectile.GetDamageAmount(1f) > 0)
         {
             stringBuilder.AppendLine(string.Concat("Damage".Translate() + ": ",

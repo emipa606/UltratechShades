@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
@@ -66,35 +67,15 @@ public class EquipmentAbility : Ability
 
     public override IEnumerable<Command> GetGizmos()
     {
-        if (gizmo == null)
+        var baseGizmos = base.GetGizmos();
+        if (baseGizmos.Any())
         {
-            Command_Ability command = !ModLister.RoyaltyInstalled || !AbilityDef.requirePsycast
-                ? new Command_EquipmentAbility(this)
-                {
-                    defaultLabel = AbilityDef.LabelCap,
-                    order = def.uiOrder,
-                    curTicks = CooldownTicksLeft
-                }
-                : new Command_EquipmentPsycast(this)
-                {
-                    defaultLabel = AbilityDef.LabelCap,
-                    order = def.uiOrder
-                };
-            if (!CanCastPowerCheck("Player", out var reason))
+            foreach (var baseGizmo in baseGizmos)
             {
-                command.Disable(reason);
-            }
-
-            gizmo = command;
-            if (AbilityDef.hasCooldown && CooldownTicksLeft == -5)
-            {
-                CooldownTicksLeft = MaxCastingTicks;
-                StartCooldown(MaxCastingTicks);
-                gizmo.Disable("AbilityOnCooldown".Translate(TicksUntilCasting.ToStringSecondsFromTicks()));
+                yield return baseGizmo;
             }
         }
 
-        yield return gizmo;
         if (Prefs.DevMode && AbilityDef.hasCooldown && CooldownTicksLeft > 0)
         {
             yield return new Command_Action

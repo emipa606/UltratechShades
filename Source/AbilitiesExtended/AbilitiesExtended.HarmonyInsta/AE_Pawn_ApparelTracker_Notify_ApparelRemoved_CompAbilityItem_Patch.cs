@@ -4,7 +4,7 @@ using Verse;
 
 namespace AbilitiesExtended.HarmonyInstance;
 
-[HarmonyPatch(typeof(Pawn_ApparelTracker), "Notify_ApparelRemoved")]
+[HarmonyPatch(typeof(Pawn_ApparelTracker), nameof(Pawn_ApparelTracker.Notify_ApparelRemoved))]
 public static class AE_Pawn_ApparelTracker_Notify_ApparelRemoved_CompAbilityItem_Patch
 {
     [HarmonyPostfix]

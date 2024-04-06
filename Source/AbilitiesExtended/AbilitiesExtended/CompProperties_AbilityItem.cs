@@ -6,7 +6,7 @@ namespace AbilitiesExtended;
 
 public class CompProperties_AbilityItem : CompProperties
 {
-    public List<AbilityDef> Abilities = new List<AbilityDef>();
+    public readonly List<AbilityDef> Abilities = [];
 
     public CompProperties_AbilityItem()
     {

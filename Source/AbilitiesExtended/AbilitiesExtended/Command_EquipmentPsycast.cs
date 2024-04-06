@@ -10,8 +10,8 @@ public class Command_EquipmentPsycast : Command_Ability
 {
     public int curTicks = -1;
 
-    public Command_EquipmentPsycast(EquipmentAbility ability)
-        : base(ability)
+    public Command_EquipmentPsycast(EquipmentAbility ability, Pawn pawn)
+        : base(ability, pawn)
     {
         shrinkable = true;
     }

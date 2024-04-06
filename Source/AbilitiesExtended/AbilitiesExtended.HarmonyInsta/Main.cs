@@ -9,7 +9,6 @@ internal class Main
 {
     static Main()
     {
-        var harmony = new Harmony("com.ogliss.rimworld.mod.AbilitiesExtended");
-        harmony.PatchAll(Assembly.GetExecutingAssembly());
+        new Harmony("com.ogliss.rimworld.mod.AbilitiesExtended").PatchAll(Assembly.GetExecutingAssembly());
     }
 }

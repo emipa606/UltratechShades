@@ -6,7 +6,7 @@ namespace AbilitiesExtended;
 
 public class PawnStatusTracker
 {
-    private readonly List<PawnStatus> _shooters = new List<PawnStatus>();
+    private readonly List<PawnStatus> _shooters = [];
 
     public void AddBlockedShooter(Pawn shooter, Pawn blocker)
     {

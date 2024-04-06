@@ -6,7 +6,7 @@ namespace AbilitiesExtended;
 
 public class HediffCompProperties_Ability : HediffCompProperties
 {
-    public List<AbilityDef> abilities = new List<AbilityDef>();
+    public readonly List<AbilityDef> abilities = [];
 
     public HediffCompProperties_Ability()
     {

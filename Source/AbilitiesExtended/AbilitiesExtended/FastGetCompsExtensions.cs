@@ -6,12 +6,7 @@ public static class FastGetCompsExtensions
 {
     public static T TryGetCompFast<T>(this Thing thing) where T : ThingComp
     {
-        if (!(thing is ThingWithComps thing2))
-        {
-            return null;
-        }
-
-        return thing2.GetCompFast<T>();
+        return thing is not ThingWithComps thing2 ? null : thing2.GetCompFast<T>();
     }
 
     private static T GetCompFast<T>(this ThingWithComps thing) where T : ThingComp
@@ -33,7 +28,7 @@ public static class FastGetCompsExtensions
 
     public static T TryGetCompFast<T>(this Hediff hd) where T : HediffComp
     {
-        if (!(hd is HediffWithComps hediffWithComps))
+        if (hd is not HediffWithComps hediffWithComps)
         {
             return null;
         }

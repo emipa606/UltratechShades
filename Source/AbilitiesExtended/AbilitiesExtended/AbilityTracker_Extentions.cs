@@ -46,7 +46,7 @@ public static class AbilityTracker_Extentions
 
     public static void GainAbility(this Pawn_AbilityTracker tracker, AbilityDef def, Thing source)
     {
-        if (!tracker.abilities.Any(a => a.def == def))
+        if (!tracker.abilities?.Any(a => a.def == def) == true)
         {
             tracker.abilities.Add(Activator.CreateInstance(def.abilityClass, tracker.pawn, def, source) as Ability);
         }

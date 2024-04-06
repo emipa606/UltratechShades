@@ -3,7 +3,7 @@ using Verse;
 
 namespace AbilitiesExtended.HarmonyInstance;
 
-[HarmonyPatch(typeof(Verb), "get_EquipmentSource")]
+[HarmonyPatch(typeof(Verb), nameof(Verb.EquipmentSource), MethodType.Getter)]
 public static class AE_Verb_get_EquipmentSource_Verb_UseEquipment_Patch
 {
     [HarmonyPrefix]

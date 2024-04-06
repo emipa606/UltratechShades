@@ -3,7 +3,7 @@ using Verse;
 
 namespace AbilitiesExtended.HarmonyInstance;
 
-[HarmonyPatch(typeof(Pawn_EquipmentTracker), "Notify_EquipmentRemoved")]
+[HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.Notify_EquipmentRemoved))]
 public static class AE_Pawn_EquipmentTracker_Notify_EquipmentRemoved_CompAbilityItem_Patch
 {
     [HarmonyPostfix]

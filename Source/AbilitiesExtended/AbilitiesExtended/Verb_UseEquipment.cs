@@ -17,7 +17,7 @@ public class Verb_UseEquipment : Verb_CastAbility
     public override void DrawHighlight(LocalTargetInfo target)
     {
         var def = ability.def;
-        DrawRadius();
+        DrawHighlightFieldRadiusAroundTarget(target);
         if (CanHitTarget(target) && IsApplicableTo(target))
         {
             if (def.HasAreaOfEffect)
@@ -54,7 +54,7 @@ public class Verb_UseEquipment : Verb_CastAbility
 
         if (needLOSToCenter)
         {
-            GenExplosion.RenderPredictedAreaOfEffect(resultingLine.Dest, num);
+            GenExplosion.RenderPredictedAreaOfEffect(resultingLine.Dest, num, verbProps.explosionRadiusRingColor);
             return;
         }
 

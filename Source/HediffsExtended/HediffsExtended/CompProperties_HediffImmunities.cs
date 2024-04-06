@@ -6,13 +6,12 @@ namespace HediffsExtended;
 
 public class CompProperties_HediffImmunities : CompProperties
 {
+    public readonly float textDuration = 3f;
+
+    public readonly bool throwText = true;
     public List<HediffDef> hediffDefs;
 
     public Color textColor = Color.white;
-
-    public float textDuration = 3f;
-
-    public bool throwText = true;
 
     public CompProperties_HediffImmunities()
     {
