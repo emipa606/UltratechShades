@@ -1,5 +1,8 @@
 # Changelog for UltratechShades
 
+1.5.1 - Added hacking speed for the hacker shades
+
+
 1.5.0 - Updated for 1.5
 
 
