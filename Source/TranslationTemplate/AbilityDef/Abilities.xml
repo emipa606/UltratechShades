@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: psionic collapse -->
+  <US_DoT_Area_Psyker.label>psionic collapse</US_DoT_Area_Psyker.label>
+  <!-- EN: Fire off a bolt of powerful psychic energy, blasting everyone in a nine tile radius and inflicting an extreme psychic gravitational force on them. The gravitational force deals damage over time and greatly lowers the victim's combat abilities and maneuverability. -->
+  <US_DoT_Area_Psyker.description>Fire off a bolt of powerful psychic energy, blasting everyone in a nine tile radius and inflicting an extreme psychic gravitational force on them. The gravitational force deals damage over time and greatly lowers the victim's combat abilities and maneuverability.</US_DoT_Area_Psyker.description>
+</LanguageData>

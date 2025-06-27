@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: S.A.M. lenses -->
+  <US_MatrixGlasses.label>S.A.M. lenses</US_MatrixGlasses.label>
+  <!-- EN: A sleek and stylish pair of sunglasses that appear mundane at first glance. However, these glasses conceal their true utility, which is to operate as a vessel for a S.A.M. (an acronym for Shielded Analyzing Matrice) subpersona AI. This AI is programmed to assist the wearer in various combat situations, from tracking concealed targets to anticipating the attacks of a close quarters combatant.\n        \nThese glasses also have a PLATE class shield generator built in that fully envelops the wearer's head. It acts similarly to standard armor, as while it does not provide perfect protection, it will never break from heat buildup, nor does it get in the way of projectile weaponry. The shield is also invisible, because having a giant bubble around the user's head would be a crime against fashion. -->
+  <US_MatrixGlasses.description>A sleek and stylish pair of sunglasses that appear mundane at first glance. However, these glasses conceal their true utility, which is to operate as a vessel for a S.A.M. (an acronym for Shielded Analyzing Matrice) subpersona AI. This AI is programmed to assist the wearer in various combat situations, from tracking concealed targets to anticipating the attacks of a close quarters combatant.
+        
+These glasses also have a PLATE class shield generator built in that fully envelops the wearer's head. It acts similarly to standard armor, as while it does not provide perfect protection, it will never break from heat buildup, nor does it get in the way of projectile weaponry. The shield is also invisible, because having a giant bubble around the user's head would be a crime against fashion.</US_MatrixGlasses.description>
+</LanguageData>

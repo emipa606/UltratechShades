@@ -1,0 +1,61 @@
+ManifestFileVersion: 0
+CRC: 334233948
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1af432eaa4d68d07b0d173669f613076
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 1af432eaa4d68d07b0d173669f613076
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/HackerShades/HackerShades_east.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolGlasses/CoolGlasses_east.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolAviators/CoolAviators.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Docs/Docs_south.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Terminators/Terminators_east.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolAviators/CoolAviators_west.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolGlasses/CoolGlasses_west.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/HackerShades/HackerShades_north.png
+- Assets/Data/Mlie.UltratechShades/Sounds/AbilitiesSound/USPsionic_LaunchFX.wav
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Terminators/Terminators_north.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/RoyalEye/RoyalEye_south.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/PsykerShades/PsykerShades_north.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/RoyalEye/RoyalEye_east.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolGlasses/CoolGlasses.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolGlasses/CoolGlasses_north.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Terminators/Terminators_west.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/HackerShades/HackerShades.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolAviators/CoolAviators_east.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Terminators/Terminators.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Docs/Docs.png
+- Assets/Data/Mlie.UltratechShades/Textures/Things/Mote/USPsychicZap.png
+- Assets/Data/Mlie.UltratechShades/Textures/Things/Projectile/Projectile_PsyGlasses.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Docs/Docs_east.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Terminators/Terminators_south.png
+- Assets/Data/Mlie.UltratechShades/Textures/UI/ResetIcon.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/RoyalEye/RoyalEye.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/RoyalEye/RoyalEye_north.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/PsykerShades/PsykerShades_east.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolAviators/CoolAviators_south.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolGlasses/CoolGlasses_south.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/HackerShades/HackerShades_south.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/Docs/Docs_north.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/PsykerShades/PsykerShades.png
+- Assets/Data/Mlie.UltratechShades/Sounds/AbilitiesSound/USPsionic_StartFX.wav
+- Assets/Data/Mlie.UltratechShades/Textures/Things/Mote/USPsychicBlast.png
+- Assets/Data/Mlie.UltratechShades/Textures/UI/Atlas_Struggled.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/PsykerShades/PsykerShades_south.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/RoyalEye/RoyalEye_west.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/HackerShades/HackerShades_west.png
+- Assets/Data/Mlie.UltratechShades/Textures/Apparel/CoolAviators/CoolAviators_north.png
+Dependencies: []

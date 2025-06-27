@@ -31,11 +31,11 @@ public class EquipmentAbility : Ability
 
     private EquipmentAbilityDef AbilityDef => (EquipmentAbilityDef)def;
 
-    public CompAbilityItem AbilityItem => sourceEquipment?.TryGetCompFast<CompAbilityItem>();
+    private CompAbilityItem AbilityItem => sourceEquipment?.TryGetCompFast<CompAbilityItem>();
 
-    public int MaxCastingTicks => (int)(AbilityDef.cooldown * 60f);
+    private int MaxCastingTicks => (int)(AbilityDef.cooldown * 60f);
 
-    public int CooldownTicksLeft
+    private int CooldownTicksLeft
     {
         get => TicksUntilCasting;
         set => TicksUntilCasting = value;
@@ -67,7 +67,7 @@ public class EquipmentAbility : Ability
 
     public override IEnumerable<Command> GetGizmos()
     {
-        var baseGizmos = base.GetGizmos();
+        var baseGizmos = base.GetGizmos().ToArray();
         if (baseGizmos.Any())
         {
             foreach (var baseGizmo in baseGizmos)

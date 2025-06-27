@@ -16,7 +16,7 @@ public class Command_EquipmentPsycast : Command_Ability
         shrinkable = true;
     }
 
-    public new EquipmentAbility ability => (EquipmentAbility)base.ability;
+    private new EquipmentAbility ability => (EquipmentAbility)base.ability;
 
     public override string Label
     {

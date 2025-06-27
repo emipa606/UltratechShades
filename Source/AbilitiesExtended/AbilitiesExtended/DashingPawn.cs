@@ -17,7 +17,7 @@ public class DashingPawn : AbilityPawnFlyer
 
     public override void DrawAt(Vector3 drawLoc, bool flip = false)
     {
-        FlyingPawn.DrawAt(GetDrawPos(), flip);
+        FlyingPawn.DrawAt(getDrawPos(), flip);
         if (rope && position != Vector3.zero)
         {
             GenDraw.DrawLineBetween(position, target, AltitudeLayer.PawnRope.AltitudeFor(), RopeLineMat);
@@ -33,12 +33,12 @@ public class DashingPawn : AbilityPawnFlyer
         }
 
         var mapHeld = MapHeld;
-        var dataStatic = FleckMaker.GetDataStatic(GetDrawPos(), mapHeld, FleckDefOf.DustPuffThick);
+        var dataStatic = FleckMaker.GetDataStatic(getDrawPos(), mapHeld, FleckDefOf.DustPuffThick);
         dataStatic.rotation = Rand.Range(0f, 360f);
         mapHeld.flecks.CreateFleck(dataStatic);
     }
 
-    private Vector3 GetDrawPos()
+    private Vector3 getDrawPos()
     {
         var num = ticksFlying / (float)ticksFlightTime;
         var vector = position;
@@ -50,7 +50,6 @@ public class DashingPawn : AbilityPawnFlyer
         var flyingPawn = FlyingPawn;
         if (flyingPawn.drafter != null)
         {
-            pawnCanFireAtWill = flyingPawn.drafter.FireAtWill;
         }
 
         base.RespawnPawn();

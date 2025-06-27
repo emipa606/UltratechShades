@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: psionic gravitational pressure -->
+  <US_PsychicCrush.label>psionic gravitational pressure</US_PsychicCrush.label>
+  <!-- EN: Psychic pressure crushes body parts over time, and inflicts severe debuffs on combat abilities, movement, and manipulation. -->
+  <US_PsychicCrush.description>Psychic pressure crushes body parts over time, and inflicts severe debuffs on combat abilities, movement, and manipulation.</US_PsychicCrush.description>
+  <!-- EN: crushing -->
+  <US_PsychicCrush.stages.crushing.label>crushing</US_PsychicCrush.stages.crushing.label>
+  <!-- EN: psychic crush -->
+  <US_PsychicPressure.label>psychic crush</US_PsychicPressure.label>
+  <!-- EN: A crush wound inflicted by psychically created pressure. -->
+  <US_PsychicPressure.description>A crush wound inflicted by psychically created pressure.</US_PsychicPressure.description>
+  <!-- EN: a psychic crush -->
+  <US_PsychicPressure.labelNoun>a psychic crush</US_PsychicPressure.labelNoun>
+  <!-- EN: {0} in the {1} -->
+  <US_PsychicPressure.labelNounPretty>{0} in the {1}</US_PsychicPressure.labelNounPretty>
+</LanguageData>

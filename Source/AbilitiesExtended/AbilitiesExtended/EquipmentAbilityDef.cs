@@ -16,7 +16,7 @@ public class EquipmentAbilityDef : AbilityDef
 
     public virtual string GetDescription()
     {
-        var basics = GetBasics();
+        var basics = getBasics();
         var stringBuilder = new StringBuilder();
         stringBuilder.AppendLine(description);
         if (basics != "")
@@ -27,7 +27,7 @@ public class EquipmentAbilityDef : AbilityDef
         return stringBuilder.ToString();
     }
 
-    public string GetBasics()
+    private string getBasics()
     {
         var result = "";
         var properties = verbProperties;
@@ -64,10 +64,10 @@ public class EquipmentAbilityDef : AbilityDef
         }
 
         if (properties.defaultProjectile is { projectile: not null } &&
-            properties.defaultProjectile.projectile.GetDamageAmount(1f) > 0)
+            properties.defaultProjectile.projectile.GetDamageAmount(1f, null) > 0)
         {
             stringBuilder.AppendLine(string.Concat("Damage".Translate() + ": ",
-                properties.defaultProjectile.projectile.GetDamageAmount(1f).ToString()));
+                properties.defaultProjectile.projectile.GetDamageAmount(1f, null).ToString()));
             stringBuilder.AppendLine("Damage".Translate() + " " + StringsToTranslate.AU_Type +
                                      properties.defaultProjectile.projectile.damageDef.LabelCap);
         }

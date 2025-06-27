@@ -6,12 +6,12 @@ namespace AbilitiesExtended;
 
 public class Verb_UseEquipment : Verb_CastAbility
 {
-    public VerbProperties_EquipmentAbility verbProperties => (VerbProperties_EquipmentAbility)verbProps;
+    protected VerbProperties_EquipmentAbility verbProperties => (VerbProperties_EquipmentAbility)verbProps;
 
     public new CompAbilityItem EquipmentCompSource =>
         ((EquipmentAbility)ability).sourceEquipment?.TryGetCompFast<CompAbilityItem>();
 
-    public new ThingWithComps EquipmentSource =>
+    protected new ThingWithComps EquipmentSource =>
         ability is not EquipmentAbility equipmentAbility ? null : equipmentAbility.sourceEquipment;
 
     public override void DrawHighlight(LocalTargetInfo target)

@@ -5,7 +5,7 @@ using Verse;
 namespace VerbCooldownFactor;
 
 [HarmonyPatch(typeof(VerbProperties), nameof(VerbProperties.AdjustedCooldown), typeof(Verb), typeof(Pawn))]
-public static class VerbProperties_AdjustedCooldown_Patch
+public static class VerbProperties_AdjustedCooldown
 {
     public static void Postfix(ref float __result, Verb ownerVerb)
     {

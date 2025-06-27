@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: combat-class shades -->
+  <US_CombatSunglasses.label>combat-class shades</US_CombatSunglasses.label>
+  <!-- EN: Utilize plate-class shields and advanced combat subpersona AI developments to create armored sunglasses that specialize in enhancing a certain aspect of ranged combat. -->
+  <US_CombatSunglasses.description>Utilize plate-class shields and advanced combat subpersona AI developments to create armored sunglasses that specialize in enhancing a certain aspect of ranged combat.</US_CombatSunglasses.description>
+  <!-- EN: royal-class shades -->
+  <US_PsykerSunglasses.label>royal-class shades</US_PsykerSunglasses.label>
+  <!-- EN: Expand upon utility subpersona AI to focus on humanoid psychology, facilitating the creation of an eye accessory that specializes in various forms of diplomacy. -->
+  <US_PsykerSunglasses.description>Expand upon utility subpersona AI to focus on humanoid psychology, facilitating the creation of an eye accessory that specializes in various forms of diplomacy.</US_PsykerSunglasses.description>
+  <!-- EN: psyker-class shades -->
+  <US_TruePsykerSunglasses.label>psyker-class shades</US_TruePsykerSunglasses.label>
+  <!-- EN: While sifting through various files on the research terminal, a researcher has found a mysterious file named "Project ATLAS". Analyzing the contents of this folder could prove highly advantageous. -->
+  <US_TruePsykerSunglasses.description>While sifting through various files on the research terminal, a researcher has found a mysterious file named "Project ATLAS". Analyzing the contents of this folder could prove highly advantageous.</US_TruePsykerSunglasses.description>
+  <!-- EN: utility-class shades -->
+  <US_UtilitySunglasses.label>utility-class shades</US_UtilitySunglasses.label>
+  <!-- EN: Utilize plate-class shields and advanced utility subpersona AI developments to create sunglasses that specialize in civilian tasks, namely intellectual and artisanal pursuits. -->
+  <US_UtilitySunglasses.description>Utilize plate-class shields and advanced utility subpersona AI developments to create sunglasses that specialize in civilian tasks, namely intellectual and artisanal pursuits.</US_UtilitySunglasses.description>
+</LanguageData>

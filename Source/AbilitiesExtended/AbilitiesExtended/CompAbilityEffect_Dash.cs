@@ -5,7 +5,7 @@ namespace AbilitiesExtended;
 
 public class CompAbilityEffect_Dash : CompAbilityEffect_WithDest
 {
-    public CompProperties_AbilityDash CompProp => (CompProperties_AbilityDash)props;
+    private CompProperties_AbilityDash CompProp => (CompProperties_AbilityDash)props;
 
     public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
     {

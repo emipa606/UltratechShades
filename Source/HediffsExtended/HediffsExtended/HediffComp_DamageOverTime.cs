@@ -5,9 +5,9 @@ namespace HediffsExtended;
 
 public class HediffComp_DamageOverTime : HediffComp
 {
-    public int ticksCounter;
+    private int ticksCounter;
 
-    public HediffCompProperties_DamageOverTime Props => (HediffCompProperties_DamageOverTime)props;
+    private HediffCompProperties_DamageOverTime Props => (HediffCompProperties_DamageOverTime)props;
 
     public override void CompExposeData()
     {

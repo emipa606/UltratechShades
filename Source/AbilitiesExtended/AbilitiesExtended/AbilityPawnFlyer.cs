@@ -10,11 +10,9 @@ public class AbilityPawnFlyer : PawnFlyer
 
     public Rot4 direction;
 
-    public bool pawnCanFireAtWill = true;
-
     protected Vector3 position;
 
-    public Vector3 target;
+    public new Vector3 target;
 
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {

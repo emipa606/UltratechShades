@@ -7,7 +7,7 @@ public class PawnStatus
     public readonly Pawn Blocker;
     public readonly Pawn Shooter;
 
-    private int _expiryTime;
+    private int expiryTime;
 
     public PawnStatus(Pawn shooter, Pawn blocker)
     {
@@ -18,11 +18,11 @@ public class PawnStatus
 
     public void Refresh()
     {
-        _expiryTime = Find.TickManager.TicksGame + 20;
+        expiryTime = Find.TickManager.TicksGame + 20;
     }
 
     public bool IsExpired()
     {
-        return Find.TickManager.TicksGame >= _expiryTime;
+        return Find.TickManager.TicksGame >= expiryTime;
     }
 }

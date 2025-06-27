@@ -13,7 +13,7 @@ public class CompProperties_AbilityPatternSpawn : CompProperties_AbilityEffect
 
     public readonly bool throwDust = true;
 
-    public Color dustColor = new Color(0.55f, 0.55f, 0.55f, 4f);
+    public Color dustColor = new(0.55f, 0.55f, 0.55f, 4f);
     public List<IntVec2> pattern;
 
     public ThingDef thingToSpawn;

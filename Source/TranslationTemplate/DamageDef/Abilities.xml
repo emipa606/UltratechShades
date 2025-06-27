@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: psychic blast -->
+  <PsychicBomb.label>psychic blast</PsychicBomb.label>
+  <!-- EN: {0} has died from a psychic blast. -->
+  <PsychicBomb.deathMessage>{0} has died from a psychic blast.</PsychicBomb.deathMessage>
+  <!-- EN: psychic crush -->
+  <PsychicCrush.label>psychic crush</PsychicCrush.label>
+  <!-- EN: {0} has been psychically crushed to death. -->
+  <PsychicCrush.deathMessage>{0} has been psychically crushed to death.</PsychicCrush.deathMessage>
+</LanguageData>

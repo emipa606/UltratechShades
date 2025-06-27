@@ -8,14 +8,14 @@ namespace AbilitiesExtended;
 
 public class CompAbilityEffect_PatternSpawn : CompAbilityEffect
 {
-    public new CompProperties_AbilityPatternSpawn Props => (CompProperties_AbilityPatternSpawn)props;
+    private new CompProperties_AbilityPatternSpawn Props => (CompProperties_AbilityPatternSpawn)props;
 
     public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
     {
         base.Apply(target, dest);
         var map = parent.pawn.Map;
         var list = new List<Thing>();
-        list.AddRange(AffectedCells(target, map).SelectMany(c => from t in c.GetThingList(map)
+        list.AddRange(affectedCells(target, map).SelectMany(c => from t in c.GetThingList(map)
             where t.def.category == ThingCategory.Item
             select t));
         if (Props.despawnAffectedThings)
@@ -26,7 +26,7 @@ public class CompAbilityEffect_PatternSpawn : CompAbilityEffect
             }
         }
 
-        foreach (var item2 in AffectedCells(target, map))
+        foreach (var item2 in affectedCells(target, map))
         {
             GenSpawn.Spawn(Props.thingToSpawn, item2, map);
             if (Props.throwDust)
@@ -69,11 +69,11 @@ public class CompAbilityEffect_PatternSpawn : CompAbilityEffect
 
     public override void DrawEffectPreview(LocalTargetInfo target)
     {
-        GenDraw.DrawFieldEdges(AffectedCells(target, parent.pawn.Map).ToList(),
+        GenDraw.DrawFieldEdges(affectedCells(target, parent.pawn.Map).ToList(),
             Valid(target) ? Color.white : Color.red);
     }
 
-    private IEnumerable<IntVec3> AffectedCells(LocalTargetInfo target, Map map)
+    private IEnumerable<IntVec3> affectedCells(LocalTargetInfo target, Map map)
     {
         foreach (var item in Props.pattern)
         {
@@ -87,7 +87,7 @@ public class CompAbilityEffect_PatternSpawn : CompAbilityEffect
 
     public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
     {
-        if (Props.dontCareIfOccupied && AffectedCells(target, parent.pawn.Map).Any(c => c.Filled(parent.pawn.Map)))
+        if (Props.dontCareIfOccupied && affectedCells(target, parent.pawn.Map).Any(c => c.Filled(parent.pawn.Map)))
         {
             if (throwMessages)
             {
@@ -98,7 +98,7 @@ public class CompAbilityEffect_PatternSpawn : CompAbilityEffect
             return false;
         }
 
-        if (AffectedCells(target, parent.pawn.Map).All(c => c.Standable(parent.pawn.Map)))
+        if (affectedCells(target, parent.pawn.Map).All(c => c.Standable(parent.pawn.Map)))
         {
             return true;
         }

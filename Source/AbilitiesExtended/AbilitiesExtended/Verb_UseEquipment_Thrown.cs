@@ -2,7 +2,7 @@ namespace AbilitiesExtended;
 
 public class Verb_UseEquipment_Thrown : Verb_EquipmentLaunchProjectile
 {
-    public void PostCastShot(bool inResult, out bool outResult)
+    private void PostCastShot(bool inResult, out bool outResult)
     {
         outResult = inResult;
         var primary = CasterPawn.equipment.Primary;

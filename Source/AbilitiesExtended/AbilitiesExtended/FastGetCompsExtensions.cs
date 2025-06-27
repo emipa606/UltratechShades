@@ -6,10 +6,10 @@ public static class FastGetCompsExtensions
 {
     public static T TryGetCompFast<T>(this Thing thing) where T : ThingComp
     {
-        return thing is not ThingWithComps thing2 ? null : thing2.GetCompFast<T>();
+        return thing is not ThingWithComps thing2 ? null : thing2.getCompFast<T>();
     }
 
-    private static T GetCompFast<T>(this ThingWithComps thing) where T : ThingComp
+    private static T getCompFast<T>(this ThingWithComps thing) where T : ThingComp
     {
         var typeFromHandle = typeof(T);
         var allComps = thing.AllComps;
@@ -20,31 +20,6 @@ public static class FastGetCompsExtensions
             if (thingComp.GetType() == typeFromHandle)
             {
                 return (T)thingComp;
-            }
-        }
-
-        return null;
-    }
-
-    public static T TryGetCompFast<T>(this Hediff hd) where T : HediffComp
-    {
-        if (hd is not HediffWithComps hediffWithComps)
-        {
-            return null;
-        }
-
-        if (hediffWithComps.comps == null)
-        {
-            return null;
-        }
-
-        var typeFromHandle = typeof(T);
-        var comps = hediffWithComps.comps;
-        foreach (var hediffComp in comps)
-        {
-            if (hediffComp.GetType() == typeFromHandle)
-            {
-                return (T)hediffComp;
             }
         }
 

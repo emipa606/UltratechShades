@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="AbilitiesExtended/AbilitiesExtended.csproj" />
+  <Project Path="HediffsExtended/HediffsExtended.csproj" />
+  <Project Path="VerbCooldownFactor/VerbCooldownFactor.csproj" />
+</Solution>

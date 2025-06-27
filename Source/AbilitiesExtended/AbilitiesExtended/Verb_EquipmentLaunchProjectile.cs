@@ -6,7 +6,7 @@ namespace AbilitiesExtended;
 
 public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
 {
-    public virtual ThingDef Projectile
+    protected virtual ThingDef Projectile
     {
         get
         {
@@ -64,8 +64,8 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
                 if (num2 > 0)
                 {
                     var intVec = currentTarget.Cell + GenRadial.RadialPattern[num2];
-                    ThrowDebugText("ToRadius");
-                    ThrowDebugText("Rad\nDest", intVec);
+                    throwDebugText("ToRadius");
+                    throwDebugText("Rad\nDest", intVec);
                     var projectileHitFlags = ProjectileHitFlags.NonTargetWorld;
                     Rand.PushState();
                     if (Rand.Chance(0.5f))
@@ -91,9 +91,9 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
         var targetCoverDef = randomCoverToMissInto?.def;
         if (!Rand.Chance(shotReport.AimOnTargetChance_IgnoringPosture))
         {
-            resultingLine.ChangeDestToMissWild_NewTemp(shotReport.AimOnTargetChance_StandardTarget, false, caster.Map);
-            ThrowDebugText($"ToWild{(canHitNonTargetPawnsNow ? "\nchntp" : "")}");
-            ThrowDebugText("Wild\nDest", resultingLine.Dest);
+            resultingLine.ChangeDestToMissWild(shotReport.AimOnTargetChance_StandardTarget, false, caster.Map);
+            throwDebugText($"ToWild{(canHitNonTargetPawnsNow ? "\nchntp" : "")}");
+            throwDebugText("Wild\nDest", resultingLine.Dest);
             var projectileHitFlags2 = ProjectileHitFlags.NonTargetWorld;
             Rand.PushState();
             if (Rand.Chance(0.5f) && canHitNonTargetPawnsNow)
@@ -112,13 +112,13 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
         Rand.PopState();
         if (currentTarget.Thing != null && currentTarget.Thing.def.category == ThingCategory.Pawn && flag2)
         {
-            ThrowDebugText($"ToCover{(canHitNonTargetPawnsNow ? "\nchntp" : "")}");
+            throwDebugText($"ToCover{(canHitNonTargetPawnsNow ? "\nchntp" : "")}");
             if (randomCoverToMissInto == null)
             {
                 return true;
             }
 
-            ThrowDebugText("Cover\nDest", randomCoverToMissInto.Position);
+            throwDebugText("Cover\nDest", randomCoverToMissInto.Position);
             var projectileHitFlags3 = ProjectileHitFlags.NonTargetWorld;
             if (canHitNonTargetPawnsNow)
             {
@@ -143,24 +143,24 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
             projectileHitFlags4 |= ProjectileHitFlags.NonTargetWorld;
         }
 
-        ThrowDebugText($"ToHit{(canHitNonTargetPawnsNow ? "\nchntp" : "")}");
+        throwDebugText($"ToHit{(canHitNonTargetPawnsNow ? "\nchntp" : "")}");
         if (currentTarget.Thing != null)
         {
             projectile2.Launch(manningPawn, drawPos, currentTarget, currentTarget, projectileHitFlags4,
                 preventFriendlyFire, equipmentSource, targetCoverDef);
-            ThrowDebugText("Hit\nDest", currentTarget.Cell);
+            throwDebugText("Hit\nDest", currentTarget.Cell);
         }
         else
         {
             projectile2.Launch(manningPawn, drawPos, resultingLine.Dest, currentTarget, projectileHitFlags4,
                 preventFriendlyFire, equipmentSource, targetCoverDef);
-            ThrowDebugText("Hit\nDest", resultingLine.Dest);
+            throwDebugText("Hit\nDest", resultingLine.Dest);
         }
 
         return true;
     }
 
-    public void ThrowDebugText(string text)
+    private void throwDebugText(string text)
     {
         if (DebugViewSettings.drawShooting)
         {
@@ -168,7 +168,7 @@ public class Verb_EquipmentLaunchProjectile : Verb_UseEquipment
         }
     }
 
-    public void ThrowDebugText(string text, IntVec3 c)
+    private void throwDebugText(string text, IntVec3 c)
     {
         if (DebugViewSettings.drawShooting)
         {

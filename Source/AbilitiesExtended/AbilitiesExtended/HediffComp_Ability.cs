@@ -5,7 +5,7 @@ namespace AbilitiesExtended;
 [StaticConstructorOnStartup]
 public class HediffComp_Ability : HediffComp
 {
-    public virtual HediffCompProperties_Ability Props => props as HediffCompProperties_Ability;
+    protected virtual HediffCompProperties_Ability Props => props as HediffCompProperties_Ability;
 
     public override void CompPostMake()
     {
