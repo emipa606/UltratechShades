@@ -4,9 +4,15 @@
   "CanRemove": "2",
   "PreviewVersion": "1.6",
   "SocialImageSet": true,
-  "LastXmlCleaning": "2025-06-27T20:29:22.698302+02:00",
+  "LastXmlCleaning": "2025-07-16T14:07:29.1557482+02:00",
   "SearchTags": [
     " combat",
     " fashion"
-  ]
+  ],
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 59077,
+  "LinesOfXML": 46006,
+  "CodeBaseSize": 79
 }
