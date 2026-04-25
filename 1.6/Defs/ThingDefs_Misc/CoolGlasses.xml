@@ -39,6 +39,7 @@ These glasses also have a PLATE class shield generator built in that fully envel
       <li>Headgear</li>
     </thingCategories>
     <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>

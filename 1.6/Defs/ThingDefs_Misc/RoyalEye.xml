@@ -41,6 +41,7 @@ These glasses also have a weak PLATE class shield generator built in that fully 
       <li>ApparelNoble</li>
     </thingCategories>
     <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>

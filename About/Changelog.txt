@@ -1,5 +1,8 @@
 # Changelog for UltratechShades
 
+1.6.2 - Shades should no longer count as clothing for nudists
+
+
 1.6.1 - Hacking speed is now a vanilla stat
 
 

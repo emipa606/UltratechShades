@@ -45,6 +45,7 @@ These glasses also generate a miniature psychic shield around the wearer's head.
       <li>ApparelNoble</li>
     </thingCategories>
     <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
