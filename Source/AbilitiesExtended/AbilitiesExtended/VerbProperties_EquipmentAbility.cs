@@ -40,8 +40,6 @@ public class VerbProperties_EquipmentAbility : VerbProperties
 
     public float RendingChance = 0.167f;
 
-    public ResearchProjectDef requiredResearch = null;
-
     public StatDef ResistEffectStat = null;
 
     public bool TwinLinked = false;
@@ -53,4 +51,6 @@ public class VerbProperties_EquipmentAbility : VerbProperties
     public List<string> UserEffectImmuneList = [];
 
     public VerbProperties VerbProps;
+
+    public ResearchProjectDef requiredResearch = null;
 }

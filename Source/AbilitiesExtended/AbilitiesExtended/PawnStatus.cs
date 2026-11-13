@@ -16,7 +16,7 @@ public class PawnStatus
         Refresh();
     }
 
-    public void Refresh()
+    private void Refresh()
     {
         expiryTime = Find.TickManager.TicksGame + 20;
     }

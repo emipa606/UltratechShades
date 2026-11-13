@@ -1,14 +1,12 @@
 using HarmonyLib;
 using RimWorld;
-using Verse;
 
 namespace AbilitiesExtended.HarmonyInstance;
 
 [HarmonyPatch(typeof(Pawn_ApparelTracker), nameof(Pawn_ApparelTracker.Notify_ApparelRemoved))]
-public static class AE_Pawn_ApparelTracker_Notify_ApparelRemoved_CompAbilityItem_Patch
+public static class Pawn_ApparelTracker_Notify_ApparelRemoved
 {
-    [HarmonyPostfix]
-    public static void Notify_ApparelRemovedPostfix(Pawn_EquipmentTracker __instance, Apparel apparel)
+    public static void Postfix(Pawn_ApparelTracker __instance, Apparel apparel)
     {
         if (apparel.TryGetCompFast<CompAbilityItem>() == null)
         {

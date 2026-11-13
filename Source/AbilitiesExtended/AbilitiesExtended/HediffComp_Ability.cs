@@ -1,3 +1,4 @@
+using System.Linq;
 using Verse;
 
 namespace AbilitiesExtended;
@@ -10,36 +11,27 @@ public class HediffComp_Ability : HediffComp
     public override void CompPostMake()
     {
         base.CompPostMake();
-        foreach (var ab in Props.abilities)
+        foreach (var ab in Props.abilities.Where(ab => !Pawn.abilities.abilities.Any(x => x.def == ab)))
         {
-            if (!Pawn.abilities.abilities.Any(x => x.def == ab))
-            {
-                Pawn.abilities.GainAbility(ab);
-            }
+            Pawn.abilities.GainAbility(ab);
         }
     }
 
     public override void CompPostPostAdd(DamageInfo? dinfo)
     {
         base.CompPostPostAdd(dinfo);
-        foreach (var ab in Props.abilities)
+        foreach (var ab in Props.abilities.Where(ab => !Pawn.abilities.abilities.Any(x => x.def == ab)))
         {
-            if (!Pawn.abilities.abilities.Any(x => x.def == ab))
-            {
-                Pawn.abilities.GainAbility(ab);
-            }
+            Pawn.abilities.GainAbility(ab);
         }
     }
 
     public override void CompPostPostRemoved()
     {
         base.CompPostPostRemoved();
-        foreach (var ab in Pawn.abilities.abilities)
+        foreach (var ab in Pawn.abilities.abilities.Where(ab => Props.abilities.Any(x => x == ab.def)).ToList())
         {
-            if (Props.abilities.Any(x => x == ab.def))
-            {
-                Pawn.abilities.abilities.Remove(ab);
-            }
+            Pawn.abilities.abilities.Remove(ab);
         }
     }
 }

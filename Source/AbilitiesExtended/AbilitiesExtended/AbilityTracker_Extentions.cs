@@ -6,41 +6,45 @@ namespace AbilitiesExtended;
 
 public static class AbilityTracker_Extentions
 {
-    public static void TryGainEquipmentAbility(this Pawn_AbilityTracker tracker, AbilityDef abilityDef,
-        ThingWithComps thing)
+    extension(Pawn_AbilityTracker tracker)
     {
-        if (abilityDef is not EquipmentAbilityDef def)
+        public void TryGainEquipmentAbility(AbilityDef abilityDef,
+            ThingWithComps thing)
         {
-            return;
+            if (abilityDef is not EquipmentAbilityDef def)
+            {
+                return;
+            }
+
+            if (tracker.abilities.FirstOrFallback(x =>
+                    x?.def == def && x is EquipmentAbility equipmentAbility2 &&
+                    equipmentAbility2.sourceEquipment == thing) is EquipmentAbility)
+            {
+                return;
+            }
+
+            if (Activator.CreateInstance(def.abilityClass, tracker.pawn, def, thing) is EquipmentAbility
+                equipmentAbility)
+            {
+                equipmentAbility.sourceEquipment = thing;
+                tracker.abilities.Add(equipmentAbility);
+            }
+
+            tracker.Notify_TemporaryAbilitiesChanged();
         }
 
-        if (tracker.abilities.FirstOrFallback(x =>
-                x.def == def && x is EquipmentAbility equipmentAbility2 &&
-                equipmentAbility2.sourceEquipment == thing) is EquipmentAbility)
+        public void TryRemoveEquipmentAbility(AbilityDef def, ThingWithComps thing)
         {
-            return;
+            if (def is not EquipmentAbilityDef || tracker.abilities.FirstOrFallback(x =>
+                        x?.def == def && x is EquipmentAbility equipmentAbility &&
+                        equipmentAbility.sourceEquipment == thing) is
+                    not EquipmentAbility item)
+            {
+                return;
+            }
+
+            tracker.abilities.Remove(item);
+            tracker.Notify_TemporaryAbilitiesChanged();
         }
-
-        if (Activator.CreateInstance(def.abilityClass, tracker.pawn, def, thing) is EquipmentAbility equipmentAbility)
-        {
-            equipmentAbility.sourceEquipment = thing;
-            tracker.abilities.Add(equipmentAbility);
-        }
-
-        tracker.Notify_TemporaryAbilitiesChanged();
-    }
-
-    public static void TryRemoveEquipmentAbility(this Pawn_AbilityTracker tracker, AbilityDef def, ThingWithComps thing)
-    {
-        if (def is not EquipmentAbilityDef || tracker.abilities.FirstOrFallback(x =>
-                    x.def == def && x is EquipmentAbility equipmentAbility &&
-                    equipmentAbility.sourceEquipment == thing) is
-                not EquipmentAbility item)
-        {
-            return;
-        }
-
-        tracker.abilities.Remove(item);
-        tracker.Notify_TemporaryAbilitiesChanged();
     }
 }

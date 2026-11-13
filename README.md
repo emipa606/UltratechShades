@@ -65,4 +65,4 @@ Renn - Helpful tips
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/UltratechShades?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2937778775) | tags: combat, fashion
+[![Image](https://img.shields.io/github/v/release/emipa606/UltratechShades?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2937778775) | combat, fashion

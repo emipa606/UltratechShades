@@ -4,7 +4,7 @@ using Verse;
 namespace AbilitiesExtended;
 
 [StaticConstructorOnStartup]
-public class AbilityButtons
+public static class AbilityButtons
 {
     public static readonly Texture2D EmptyTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
 

@@ -4,9 +4,8 @@ using Verse;
 namespace AbilitiesExtended.HarmonyInstance;
 
 [HarmonyPatch(typeof(Verb), nameof(Verb.EquipmentSource), MethodType.Getter)]
-public static class AE_Verb_get_EquipmentSource_Verb_UseEquipment_Patch
+public static class Verb_EquipmentSource_Get
 {
-    [HarmonyPrefix]
     [HarmonyPriority(200)]
     public static bool Prefix(ref Verb __instance, ref ThingWithComps __result)
     {

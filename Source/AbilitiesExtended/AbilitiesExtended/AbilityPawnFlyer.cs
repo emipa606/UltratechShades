@@ -8,7 +8,7 @@ public class AbilityPawnFlyer : PawnFlyer
 {
     public Ability ability;
 
-    public Rot4 direction;
+    private Rot4 direction;
 
     protected Vector3 position;
 
@@ -17,9 +17,21 @@ public class AbilityPawnFlyer : PawnFlyer
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);
-        direction = startVec.x > target.ToIntVec3().x ? Rot4.West :
-            startVec.x < target.ToIntVec3().x ? Rot4.East :
-            startVec.y < target.ToIntVec3().y ? Rot4.North : Rot4.South;
+        if (startVec.x > target.ToIntVec3().x)
+        {
+            direction = Rot4.West;
+        }
+        else
+        {
+            if (startVec.x < target.ToIntVec3().x)
+            {
+                direction = Rot4.East;
+            }
+            else
+            {
+                direction = startVec.y < target.ToIntVec3().y ? Rot4.North : Rot4.South;
+            }
+        }
     }
 
     public override void Tick()

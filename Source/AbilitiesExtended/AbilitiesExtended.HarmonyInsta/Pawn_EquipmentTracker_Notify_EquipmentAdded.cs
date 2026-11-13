@@ -3,11 +3,10 @@ using Verse;
 
 namespace AbilitiesExtended.HarmonyInstance;
 
-[HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.Notify_EquipmentRemoved))]
-public static class AE_Pawn_EquipmentTracker_Notify_EquipmentRemoved_CompAbilityItem_Patch
+[HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.Notify_EquipmentAdded))]
+public static class Pawn_EquipmentTracker_Notify_EquipmentAdded
 {
-    [HarmonyPostfix]
-    public static void Notify_EquipmentRemovedPostfix(Pawn_EquipmentTracker __instance, ThingWithComps eq)
+    public static void Postfix(Pawn_EquipmentTracker __instance, ThingWithComps eq)
     {
         if (eq == null || __instance == null || eq.TryGetCompFast<CompAbilityItem>() == null)
         {
@@ -26,9 +25,10 @@ public static class AE_Pawn_EquipmentTracker_Notify_EquipmentRemoved_CompAbility
             return;
         }
 
-        foreach (var ability in compAbilityItem.Props.Abilities)
+        foreach (var abilityDef in compAbilityItem.Props.Abilities)
         {
-            __instance.pawn.abilities.TryRemoveEquipmentAbility(ability, eq);
+            var ability = (EquipmentAbilityDef)abilityDef;
+            __instance.pawn.abilities.TryGainEquipmentAbility(ability, eq);
         }
     }
 }

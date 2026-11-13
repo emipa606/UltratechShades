@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
@@ -113,24 +114,24 @@ public class EquipmentAbilityDef : AbilityDef
                 else
                 {
                     stringBuilder.AppendLine(StringsToTranslate.AU_EffectChance);
-                    foreach (var item2 in hediffsToApply)
+                    foreach (var hediffDef in hediffsToApply.Select(hediff => hediff.hediffDef))
                     {
                         var num = 0f;
-                        if (item2.hediffDef.comps != null && item2.hediffDef.HasComp(typeof(HediffComp_Disappears)))
+                        if (hediffDef.comps != null && hediffDef.HasComp(typeof(HediffComp_Disappears)))
                         {
                             var max =
-                                ((HediffCompProperties_Disappears)item2.hediffDef.CompPropsFor(
+                                ((HediffCompProperties_Disappears)hediffDef.CompPropsFor(
                                     typeof(HediffComp_Disappears))).disappearsAfterTicks.max;
                             num = max.TicksToSeconds();
                         }
 
                         if (num == 0f)
                         {
-                            stringBuilder.AppendLine("\t" + item2.hediffDef.LabelCap);
+                            stringBuilder.AppendLine("\t" + hediffDef.LabelCap);
                         }
                         else
                         {
-                            stringBuilder.AppendLine($"{"\t" + item2.hediffDef.LabelCap + " " + " "}{num} " +
+                            stringBuilder.AppendLine($"{"\t" + hediffDef.LabelCap + " " + " "}{num} " +
                                                      "SecondsToLower".Translate());
                         }
                     }

@@ -68,9 +68,18 @@ public class Command_EquipmentPsycast : Command_Ability
                 return text.TrimEndNewlines();
             }
 
-            var text2 = !def.AnyCompOverridesPsyfocusCost ? def.PsyfocusCostPercent :
-                !(def.PsyfocusCostRange.Span > float.Epsilon) ? def.PsyfocusCostPercentMax :
-                $"{def.PsyfocusCostRange.min * 100f}-{def.PsyfocusCostPercentMax}";
+            string text2;
+            if (!def.AnyCompOverridesPsyfocusCost)
+            {
+                text2 = def.PsyfocusCostPercent;
+            }
+            else
+            {
+                text2 = !(def.PsyfocusCostRange.Span > float.Epsilon)
+                    ? def.PsyfocusCostPercentMax
+                    : $"{def.PsyfocusCostRange.min * 100f}-{def.PsyfocusCostPercentMax}";
+            }
+
             text += "PsyfocusLetter".Translate() + ": " + text2;
 
             return text.TrimEndNewlines();

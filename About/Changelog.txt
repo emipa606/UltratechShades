@@ -1,5 +1,8 @@
 # Changelog for UltratechShades
 
+1.7.0 - Mod updated for 1.7 and passed autotests
+
+
 1.6.2 - Shades should no longer count as clothing for nudists
 
 

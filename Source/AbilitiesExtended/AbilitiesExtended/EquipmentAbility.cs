@@ -9,9 +9,8 @@ namespace AbilitiesExtended;
 
 public class EquipmentAbility : Ability
 {
-    public ThingWithComps sourceEquipment;
-
     private int TicksUntilCasting = -5;
+    public ThingWithComps sourceEquipment;
 
     public EquipmentAbility(Pawn pawn)
         : base(pawn)
@@ -154,9 +153,6 @@ public class EquipmentAbility : Ability
         if (CooldownTicksLeft >= 0 && !Find.TickManager.Paused)
         {
             CooldownTicksLeft--;
-            if (AbilityItem != null)
-            {
-            }
 
             if (!gizmo.disabled)
             {

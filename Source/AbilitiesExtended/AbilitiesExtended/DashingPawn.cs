@@ -48,9 +48,6 @@ public class DashingPawn : AbilityPawnFlyer
     public override void RespawnPawn()
     {
         var flyingPawn = FlyingPawn;
-        if (flyingPawn.drafter != null)
-        {
-        }
 
         base.RespawnPawn();
         DefDatabase<SoundDef>.GetNamed("Dash_Whoosh").PlayOneShot(flyingPawn);

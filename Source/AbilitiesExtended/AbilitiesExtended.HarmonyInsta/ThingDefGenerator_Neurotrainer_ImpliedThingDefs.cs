@@ -6,7 +6,7 @@ using Verse;
 namespace AbilitiesExtended.HarmonyInstance;
 
 [HarmonyPatch(typeof(ThingDefGenerator_Neurotrainer), nameof(ThingDefGenerator_Neurotrainer.ImpliedThingDefs))]
-public static class AE_ThingDefGenerator_Neurotrainer_ImpliedThingDefs_Filter_Patch
+public static class ThingDefGenerator_Neurotrainer_ImpliedThingDefs
 {
     public static IEnumerable<ThingDef> Postfix(IEnumerable<ThingDef> list)
     {

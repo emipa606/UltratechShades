@@ -5,4 +5,38 @@
   <Project Path="AbilitiesExtended/AbilitiesExtended.csproj" />
   <Project Path="HediffsExtended/HediffsExtended.csproj" />
   <Project Path="VerbCooldownFactor/VerbCooldownFactor.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Misc/">
+    <File Path="../1.7/Defs/ThingDefs_Misc/CoolAviators.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Misc/CoolGlasses.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Misc/Docs.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Misc/HackerShades.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Misc/PsykerShades.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Misc/RoyalEye.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Misc/Terminators.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Patches/">
+    <File Path="../1.7/Patches/SoSGlassesPatch.xml" />
+    <File Path="../1.7/Patches/VanillaExpandedPsycasts.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Effects/">
+    <File Path="../1.7/Defs/Effects/Effecter_Damage.xml" />
+    <File Path="../1.7/Defs/Effects/Fleck_Visual.xml" />
+    <File Path="../1.7/Defs/Effects/SoundDefs.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ResearchProjectDefs/">
+    <File Path="../1.7/Defs/ResearchProjectDefs/ResearchProjects_Various.xml" />
+    <File Path="../1.7/Defs/ResearchProjectDefs/ResearchTabs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Stats/">
+    <File Path="../1.7/Defs/Stats/VCF.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Abilities/">
+    <File Path="../1.7/Defs/Abilities/Abilities.xml" />
+  </Folder>
 </Solution>
